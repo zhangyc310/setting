@@ -1,24 +1,22 @@
 {
-    "name": "funson86/yii2-setting",
-    "description": "Yii2 Setting for other application",
+    "name": "zhangyc/setting",
+    "description": "an yii2 setting module from funson86/yii2-setting, add some feature.",
     "type": "yii2-extension",
-    "keywords": ["yii2","extension","setting"],
-    "license": "Apache-2.0",
+    "require": {
+        "yiisoft/yii2": "2.0.18"
+    },
     "authors": [
         {
-            "name": "Funson Lee",
-            "email": "funson86@gmail.com"
+            "name": "zhangyc",
+            "email": "26365685@qq.com"
         }
     ],
-    "require": {
-        "yiisoft/yii2": "*"
-    },
     "autoload": {
         "psr-4": {
-            "funson86\\setting\\": ""
+            "zhangyc310\\setting\\": ""
         }
     },
     "extra": {
-        "bootstrap": "funson86\\setting\\Bootstrap"
+        "bootstrap": "zhangyc310\\setting\\Bootstrap"
     }
 }

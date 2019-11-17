@@ -12,7 +12,7 @@ class Setting extends \yii\base\Component
             return;
         }
 
-        $setting = \funson86\setting\models\Setting::find()->where(['code' => $code])->one();
+        $setting = \zhangyc310\setting\models\Setting::find()->where(['code' => $code])->one();
 
         if ($setting) {
             return $setting->value;
