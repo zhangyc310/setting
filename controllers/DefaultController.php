@@ -37,9 +37,11 @@ class DefaultController extends Controller
 
         if (Yii::$app->request->isPost) {
             $setting = Yii::$app->request->post('Setting');
+            $cache   = \YII::$app->cache;
             foreach ($setting as $key => $value) {
                 Setting::updateAll(['value' => $value], ['code' => $key]);
                 Yii::trace($value, "updateAll: code: " . $key);
+                $cache->add('setting_' . $key, $value);
             }
         }
 

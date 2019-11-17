@@ -11,15 +11,17 @@ class Setting extends \yii\base\Component
         if (!$code) {
             return;
         }
+        $cache = \YII::$app->cache;
 
-        $setting = \zhangyc310\setting\models\Setting::find()->where(['code' => $code])->one();
-
-        if ($setting) {
-            return $setting->value;
+        $exist = $cache->exists("setting_" . $code);
+        $value = "";
+        if ($exist) {
+            $value = $cache->get("setting_" . $code);
         } else {
-            return;
+            $value = \zhangyc310\setting\models\Setting::find()->where(['code' => $code])->one();
+            // return;
         }
-
+        return $value;
     }
 
 }
