@@ -1,6 +1,14 @@
 Yii2 Setting
 =========
-Yii2 Setting for other application, especially for [Yii2 Adminlte](https://github.com/zhangyc310/yii2-adminlte)
+Yii2 Setting for other application, especially for [Yii2 Adminlte]
+
+Add 3 feature
+1. add textarea type
+origin only have two types, input and select ,when you want input a long text , the input is not suitable, Now, add the textarea type.
+2. hiden parent node:
+whene parent node's value is "hidden", that will not show in tabs;
+3. query from cache
+origin query the setting is from database such as mysql, it may slow, now can query from cache .
 
 Installation
 ------------
