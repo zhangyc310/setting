@@ -11,7 +11,7 @@ class Setting extends \yii\base\Component
         if (!$code) {
             return;
         }
-        $cache = \YII::$app->cache;
+        $cache = Yii::$app->cache;
 
         $exist = $cache->exists("setting_" . $code);
         $value = "";
@@ -19,7 +19,7 @@ class Setting extends \yii\base\Component
             $value = $cache->get("setting_" . $code);
         } else {
             $value = \zhangyc310\setting\models\Setting::find()->where(['code' => $code])->one();
-            // return;
+            $cache->add('setting_' . $code, $value);
         }
         return $value;
     }

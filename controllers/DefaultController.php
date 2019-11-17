@@ -37,15 +37,15 @@ class DefaultController extends Controller
 
         if (Yii::$app->request->isPost) {
             $setting = Yii::$app->request->post('Setting');
-            $cache   = \YII::$app->cache;
+            $cache   = Yii::$app->cache;
             foreach ($setting as $key => $value) {
                 Setting::updateAll(['value' => $value], ['code' => $key]);
-                Yii::trace($value, "updateAll: code: " . $key);
+                // Yii::trace($value, "updateAll: code: " . $key);
                 $cache->add('setting_' . $key, $value);
             }
         }
 
-        $settingParent = Setting::find()->where(['parent_id' => 0])->orderBy(['sort_order' => SORT_ASC])->all();
+        $settingParent = Setting::find()->where(['parent_id' => 0])->andWhere(['<>', 'value', 'hidden'])->orderBy(['sort_order' => SORT_ASC])->all();
         return $this->render('index', [
             'settingParent' => $settingParent,
         ]);
