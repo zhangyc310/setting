@@ -24,7 +24,7 @@ foreach ($settingParent as $parent) {
         } elseif ($child->type == 'textarea') {
             $area = Html::textarea("Setting[$child->code]", $child->value, ["class" => "form-control", 'rows' => '5']);
             $str .= $area;
-            Yii::trace($area, "textarea");
+            // Yii::trace($area, "textarea");
         } elseif ($child->type == 'select') {
             $options      = [];
             $arrayOptions = explode(',', $child->store_range);
