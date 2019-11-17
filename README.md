@@ -19,13 +19,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require zhangyc/yii2-setting "20191117v4"
+php composer.phar require zhangyc/yii2-setting "20191117v5"
 ```
 
 or add
 
 ```
-"zhangyc/yii2-setting": "20191117v4"
+"zhangyc/yii2-setting": "20191117v5"
 ```
 
 to the require section of your `composer.json` file.
