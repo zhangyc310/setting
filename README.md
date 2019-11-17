@@ -5,6 +5,7 @@ Yii2 Setting for other application, especially for [Yii2 Adminlte]
 Add 3 feature
 1. add textarea type
 origin only have two types, input and select ,when you want input a long text , the input is not suitable, Now, add the textarea type.
+So the types are `textarea`,`text`,`password`,`select`.
 2. hiden parent node:
 whene parent node's value is "hidden", that will not show in tabs;
 3. query from cache
