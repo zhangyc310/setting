@@ -2,6 +2,7 @@
     "name": "zhangyc/yii2-setting",
     "description": "an yii2 setting module from funson86/yii2-setting, add some feature.",
     "keywords": ["yii2","extension","setting"],
+    "license": "MIT",
     "type": "yii2-extension",
     "require": {
         "yiisoft/yii2": "*"
