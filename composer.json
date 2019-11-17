@@ -1,5 +1,5 @@
 {
-    "name": "zhangyc/setting",
+    "name": "zhangyc/yii2-setting",
     "description": "an yii2 setting module from funson86/yii2-setting, add some feature.",
     "type": "yii2-extension",
     "require": {
