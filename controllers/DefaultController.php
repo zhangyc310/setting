@@ -41,7 +41,7 @@ class DefaultController extends Controller
             foreach ($setting as $key => $value) {
                 Setting::updateAll(['value' => $value], ['code' => $key]);
                 // Yii::trace($value, "updateAll: code: " . $key);
-                $cache->add('setting_' . $key, $value);
+                $cache->set('setting_' . $key, $value);
             }
         }
 
